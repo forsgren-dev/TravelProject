@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="AppWebApi/AppWebApi.csproj" />
+  <Project Path="Configuration/Configuration.csproj" />
+</Solution>
