@@ -53,8 +53,8 @@ public class AdminController : ControllerBase
     }
 
      [HttpGet()]
-        [ActionName("MySecrets")]
-        public IActionResult MySecrets()
+        [ActionName("MySecretsOptions")]
+        public IActionResult MySecretsOptions()
         {
             return Ok(_mySecretsOptions);
         }
