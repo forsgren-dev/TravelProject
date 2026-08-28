@@ -1,0 +1,91 @@
+{
+  "version": "0.1",
+  "header": {
+    "name": "travel-db",
+    "description": "Travel Database - SQL Server Database Scripts Project"
+  },
+  "projects": [
+    {
+      "path": "1-CREATE-DB",
+      "name": "1-CREATE-DB",
+      "type": "Folder",
+      "description": "Database and table creation scripts"
+    },
+    {
+      "path": "2-POPULATE-DB",
+      "name": "2-POPULATE-DB",
+      "type": "Folder",
+      "description": "Data population scripts"
+    },
+    {
+      "path": "3-STORED-PROCEDURES",
+      "name": "3-STORED-PROCEDURES",
+      "type": "Folder",
+      "description": "Stored procedures for database operations"
+    },
+    {
+      "path": "4-VIEWS",
+      "name": "4-VIEWS",
+      "type": "Folder",
+      "description": "SQL Server views for data querying"
+    },
+    {
+      "path": "5-TABLE-FUNCTIONS",
+      "name": "5-TABLE-FUNCTIONS",
+      "type": "Folder",
+      "description": "Table-valued user-defined functions"
+    },
+    {
+      "path": "0-DEMO-SCRIPTS",
+      "name": "0-DEMO-SCRIPTS",
+      "type": "Folder",
+      "description": "Demonstration scripts for different skill levels"
+    },
+    {
+      "path": "6-RANDOM-TESTS",
+      "name": "6-RANDOM-TESTS",
+      "type": "Folder",
+      "description": "Testing and validation scripts"
+    }
+  ],
+  "configurations": [
+    {
+      "name": "Default",
+      "description": "Build order for database deployment"
+    }
+  ],
+  "buildOrder": [
+    "1-CREATE-DB/00-delete-database.sql",
+    "1-CREATE-DB/01-create-database.sql",
+    "1-CREATE-DB/02-create-country.sql",
+    "1-CREATE-DB/03-create-city.sql",
+    "1-CREATE-DB/04-create-attraction.sql",
+    "1-CREATE-DB/05-create-category.sql",
+    "1-CREATE-DB/06-create-attractioncategory.sql",
+    "1-CREATE-DB/07-create-users.sql",
+    "1-CREATE-DB/08-create-reviews.sql",
+    "1-CREATE-DB/09-create-indexes.sql",
+    "2-POPULATE-DB/01-populate-users.sql",
+    "2-POPULATE-DB/02-populate-country.sql",
+    "2-POPULATE-DB/03-populate-city.sql",
+    "2-POPULATE-DB/04-populate-attraction.sql",
+    "2-POPULATE-DB/05-populate-category.sql",
+    "2-POPULATE-DB/06-distribute-categories.sql",
+    "2-POPULATE-DB/07-populate-reviews.sql",
+    "3-STORED-PROCEDURES/01-add-user.sql",
+    "3-STORED-PROCEDURES/02-add-attraction.sql",
+    "3-STORED-PROCEDURES/03-add-uppdate-review-comment.sql",
+    "3-STORED-PROCEDURES/04-add-uppdate-review-rating.sql",
+    "3-STORED-PROCEDURES/05-delete-user.sql",
+    "3-STORED-PROCEDURES/06-delete-attraction.sql",
+    "3-STORED-PROCEDURES/07-delete-rating.sql",
+    "3-STORED-PROCEDURES/08-add-category.sql",
+    "4-VIEWS/01-attractions-by-country-and-city-rating.sql",
+    "4-VIEWS/02-attractions-without-comments.sql",
+    "4-VIEWS/03-attractions-by-country-and-city-comments.sql",
+    "4-VIEWS/04-users-and-reviews.sql",
+    "5-TABLE-FUNCTIONS/01-comments-between-dates.sql",
+    "5-TABLE-FUNCTIONS/02-no-comments-since-date.sql",
+    "5-TABLE-FUNCTIONS/03-users-with-no-comments-since-date.sql"
+  ]
+}
