@@ -1,4 +1,4 @@
-
+using Microsoft.EntityFrameworkCore;
 using DbContext;
 using DbRepos;
 
@@ -47,7 +47,9 @@ builder.Services.AddSwaggerGen(c =>
 
 
 // Adding DbContext and DbRepos to the DI container
-builder.Services.AddDbContext<MainDbContext, MainDbContext.SqlServerDbContext>();
+builder.Services.AddDbContext<MainDbContext, MainDbContext.SqlServerDbContext>(
+    options => options.UseSqlServer(builder.Configuration.GetConnectionString("SqLServerDocker"), 
+    sqlOptions => sqlOptions.EnableRetryOnFailure()));
 builder.Services.AddScoped<AdminDbRepos>();
 
 
