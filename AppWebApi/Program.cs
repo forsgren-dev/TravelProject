@@ -47,9 +47,9 @@ builder.Services.AddSwaggerGen(c =>
 
 
 // Adding DbContext and DbRepos to the DI container
-builder.Services.AddDbContext<MainDbContext.SqlServerDbContext>();
+builder.Services.AddDbContext<MainDbContext, MainDbContext.SqlServerDbContext>();
 builder.Services.AddScoped<AdminDbRepos>();
-    
+
 
 
 var app = builder.Build();
