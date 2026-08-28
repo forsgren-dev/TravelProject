@@ -1,4 +1,4 @@
-USE forsgren;
+USE travel-db;
 GO
 
 -- ==== STORED PROCEDURES, G-nivå ====
@@ -142,7 +142,7 @@ SELECT * FROM dbo.Reviews WHERE AttractionId = (SELECT AttractionId FROM dbo.Att
 
 ------------------------------------------------------------
 
-USE forsgren;
+USE travel-db;
 GO
 
 -- ==== VIEWS, G-nivå ====

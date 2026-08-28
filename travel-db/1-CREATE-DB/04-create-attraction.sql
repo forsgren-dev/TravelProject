@@ -1,4 +1,4 @@
-USE forsgren;
+USE travel-db;
 GO
 
 SET ANSI_NULLS ON

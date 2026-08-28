@@ -1,4 +1,4 @@
-USE forsgren;
+USE travel-db;
 GO
 
 -- ==== STORED PROCEDURES, VG-nivå ====
@@ -109,7 +109,7 @@ GO
 
 ------------------------------------------------------------
 
-USE forsgren;
+USE travel-db;
 GO
 
 -- ==== USER DEFINED FUNCTIONS, VG-nivå ====

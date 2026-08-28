@@ -1,4 +1,4 @@
-USE forsgren;
+USE travel-db;
 GO
 
 INSERT INTO dbo.Attraction

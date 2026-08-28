@@ -1,4 +1,4 @@
-USE forsgren;
+USE travel-db;
 GO
 
 -- Visar alla sevärdheter per land och ort samt eventiella användarkommentarer:

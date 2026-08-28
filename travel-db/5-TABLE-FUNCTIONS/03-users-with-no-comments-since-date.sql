@@ -1,4 +1,4 @@
-USE forsgren;
+USE travel-db;
 GO
 
 -- User Defined (table) Function för att visa användare som inte har 

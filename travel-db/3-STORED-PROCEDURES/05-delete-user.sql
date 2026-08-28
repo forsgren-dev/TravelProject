@@ -1,4 +1,4 @@
-USE forsgren;
+USE travel-db;
 GO
 
 -- DROP PROCEDURE IF EXISTS dbo.usp_DeleteUser;

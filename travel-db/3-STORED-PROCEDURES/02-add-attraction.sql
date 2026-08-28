@@ -1,4 +1,4 @@
-USE forsgren;
+USE travel-db;
 GO
 
 DROP PROCEDURE IF EXISTS dbo.usp_AddAttraction;
@@ -93,7 +93,7 @@ GO
 -- END;
 -- GO
 
--- USE forsgren;
+-- USE travel-db;
 -- GO
 
 -- -- Plockar fram CityId för Stockholm:

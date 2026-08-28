@@ -1,4 +1,4 @@
-USE forsgren;
+USE travel-db;
 GO
 
 SELECT *
@@ -122,7 +122,7 @@ ORDER BY a.AttractionName;
 SELECT *
 FROM sys.procedures;
 
-USE forsgren;
+USE travel-db;
 GO
 
 -- Visar alla användare samt deras ev senaste ReviewDate
