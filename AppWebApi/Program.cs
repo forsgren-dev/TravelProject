@@ -1,4 +1,5 @@
 using Microsoft.EntityFrameworkCore;
+using Configuration.Options;
 using DbContext;
 using DbRepos;
 
@@ -47,8 +48,33 @@ builder.Services.AddSwaggerGen(c =>
 
 
 // Adding DbContext and DbRepos to the DI container
+var useDataSetWithTag = builder.Configuration["DatabaseConnections:UseDataSetWithTag"];
+var defaultDataUser = builder.Configuration["DatabaseConnections:DefaultDataUser"];
+
+var connectionSets = builder.Configuration
+    .GetSection(DbConnectionSetsOptions.Position)
+    .Get<DbConnectionSetsOptions>();
+
+var connectionName = connectionSets?.DataSets?
+    .FirstOrDefault(dataSet => dataSet.DbTag == useDataSetWithTag)?
+    .DbConnections?
+    .FirstOrDefault(connection => connection.DbUserLogin == defaultDataUser)?
+    .DbConnection;
+
+if (string.IsNullOrWhiteSpace(connectionName))
+{
+    throw new InvalidOperationException($"No database connection named for tag '{useDataSetWithTag}' and user '{defaultDataUser}'.");
+}
+
+var connectionString = builder.Configuration.GetConnectionString(connectionName);
+
+if (string.IsNullOrWhiteSpace(connectionString))
+{
+    throw new InvalidOperationException($"Connection string '{connectionName}' was not found.");
+}
+
 builder.Services.AddDbContext<MainDbContext, MainDbContext.SqlServerDbContext>(
-    options => options.UseSqlServer(builder.Configuration.GetConnectionString("SqLServerDocker"), 
+    options => options.UseSqlServer(connectionString,
     sqlOptions => sqlOptions.EnableRetryOnFailure()));
 builder.Services.AddScoped<AdminDbRepos>();
 
