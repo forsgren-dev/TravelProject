@@ -1,4 +1,4 @@
-USE travel-db;
+USE [travel-db];
 GO
 
 DELETE FROM dbo.AttractionCategory;

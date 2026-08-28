@@ -69,7 +69,7 @@ PRINT '============================================================';
 GO
 
 PRINT '============================================================';
-PRINT '==   Klart! Databasen forsgren är skapad och välfylld.    ==';
+PRINT '==   Klart! Databasen travel-db är skapad och välfylld.   ==';
 PRINT '============================================================';
 GO
 

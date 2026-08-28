@@ -8,12 +8,12 @@ IF EXISTS (
     WHERE name = 'travel-db'
 )
 BEGIN
-    ALTER DATABASE travel-db
+    ALTER DATABASE [travel-db]
     SET SINGLE_USER
     WITH ROLLBACK IMMEDIATE;
 END
 
-DROP DATABASE IF EXISTS travel-db;
+DROP DATABASE IF EXISTS [travel-db];
 PRINT '-- Database ''travel_db'' deleted! --'
 GO
 

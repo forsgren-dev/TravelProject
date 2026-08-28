@@ -1,4 +1,4 @@
-USE travel-db;
+USE [travel-db];
 GO
 
 -- User Defined (table) Function för att visa sevärdheter som har 

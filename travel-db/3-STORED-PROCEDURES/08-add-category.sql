@@ -1,4 +1,4 @@
-USE travel-db;
+USE [travel-db];
 GO
 
 -- Stored Procedure för att lägga till kategori

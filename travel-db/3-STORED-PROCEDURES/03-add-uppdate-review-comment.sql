@@ -1,4 +1,4 @@
-USE travel-db;
+USE [travel-db];
 GO
 
 DROP PROCEDURE IF EXISTS dbo.usp_AddOrUpdateReviewComment;

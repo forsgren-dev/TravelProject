@@ -1,4 +1,4 @@
-USE travel-db;
+USE [travel-db];
 GO
 
 -- Visar alla sevärdheter som inte har några kommentarer
