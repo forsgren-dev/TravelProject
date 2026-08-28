@@ -7,7 +7,8 @@ using DbModels;
 using DbContext;
 using Configuration;
 
-namespace DbRepos;
+namespace DbRepos.AdminDbRepos
+{;
 
 public class AdminDbRepos
 {
