@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": "."
+		}
+	],
+	"settings": {
+		"mssql.intelliSense.enableErrorChecking": false,
+		"files.associations": {
+			"*.sql": "sql"
+		}
+	}
+}

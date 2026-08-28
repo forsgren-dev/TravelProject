@@ -1,0 +1,23 @@
+USE forsgren;
+GO
+
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE dbo.City
+(
+	[CityId] UNIQUEIDENTIFIER NOT NULL DEFAULT NEWID(),
+	[CityName] NVARCHAR(200) NOT NULL,
+	[CountryId] UNIQUEIDENTIFIER NOT NULL,
+
+	CONSTRAINT PK_City PRIMARY KEY (CityId),
+
+	CONSTRAINT FK_City_Country 
+        FOREIGN KEY (CountryId) 
+        REFERENCES dbo.Country(CountryId)
+		 ON DELETE CASCADE
+);
+PRINT '-- Table ''City'' created. --';
+GO
+
