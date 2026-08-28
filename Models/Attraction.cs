@@ -2,10 +2,11 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Models.Interfaces;
 
 namespace Models
 {
-    public class Attraction
+    public class Attraction : IAttraction
     {
 
         public virtual Guid AttractionId { get; set; }

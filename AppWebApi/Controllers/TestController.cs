@@ -1,6 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
 using Seido.Utilities.SeedGenerator;
-using DbRepos.AdminDbRepos;
+using DbRepos;
 
 namespace AppWebApi.Controllers;
 
@@ -103,7 +103,8 @@ public class TestController : ControllerBase
         return Ok(await _adminDbRepos.GetAllAttractionsAsync());
     }
 
-    public TestController(ILogger<TestController> logger, AdminDbRepos adminDbRepos)
+    public TestController(
+        ILogger<TestController> logger, AdminDbRepos adminDbRepos)
     {
         _logger = logger;
         _adminDbRepos = adminDbRepos;
