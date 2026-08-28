@@ -7,7 +7,7 @@ namespace Models
 {
     public class Attraction
     {
-        
+
         public virtual Guid AttractionId { get; set; }
         public virtual string AttractionName { get; set; }
         public virtual string AttractionDescription { get; set; }
@@ -15,6 +15,8 @@ namespace Models
         public virtual string AttractionZip { get; set; }
         public virtual Guid CityId { get; set; }
 
+        
+        public Attraction() { }
 
     }
 }

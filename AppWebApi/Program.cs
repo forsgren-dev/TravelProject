@@ -1,4 +1,6 @@
 
+using DbContext;
+using DbRepos;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -42,6 +44,13 @@ builder.Services.AddSwaggerGen(c =>
         Description = "This is a RESTful API using Swagger"
     });
 });
+
+
+// Adding DbContext and DbRepos to the DI container
+builder.Services.AddDbContext<MainDbContext.SqlServerDbContext>();
+builder.Services.AddScoped<AdminDbRepos>();
+    
+
 
 var app = builder.Build();
 

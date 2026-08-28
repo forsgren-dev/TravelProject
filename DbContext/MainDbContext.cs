@@ -12,7 +12,7 @@ namespace DbContext;
 public class MainDbContext : Microsoft.EntityFrameworkCore.DbContext
 {
     #region C# model of database tables
-    public DbSet<Attraction> Attraction { get; set; }
+    public DbSet<AttractionDbM> Attraction { get; set; }
     #endregion
 
     #region constructors
@@ -79,3 +79,6 @@ public class MainDbContext : Microsoft.EntityFrameworkCore.DbContext
             base.OnModelCreating(modelBuilder);
         }
     }
+
+    #endregion
+}
